@@ -1,0 +1,11 @@
+﻿@model Sehir
+@{
+    ViewData["Title"] = "SehirBilgi";
+}
+
+<h1>@Model.SehirAd</h1>
+
+<h3>@Model.SehirAd ilinin Id'si   = @Model.Id</h3>
+<h3>@Model.SehirAd ilinin Bölgesi = @Model.Bolge.BolgeAd.ToString()</h3>
+<h3>@Model.SehirAd ilinin Nüfusu  = @Model.Nufus.ToString("N0")</h3>
+

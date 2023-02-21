@@ -1,0 +1,21 @@
+﻿@model Bolge
+@{
+    ViewData["Title"] = "BolgeBilgi";
+}
+
+<table class="table table-bordered">
+    <tr>
+        <th>Şehir Id</th>
+        <th>Şehir</th>
+    </tr>
+    @foreach (var item in Model.Sehirler)
+    {
+        <tr>
+            <td>@item.Id</td>
+            <td>
+                <a asp-action="SehirBilgi" asp-route-slug="@item.Slug"><div class="link link-success text-decoration-none"><h2>@item.SehirAd</h2></div></a>
+            </td>
+        </tr>
+    }
+</table>
+
